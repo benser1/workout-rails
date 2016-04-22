@@ -1,0 +1,12 @@
+<h1>Workout Show Page</h1>
+
+<h3><%= @workout.title %></h3>
+<% @workout.exercises.each do |exercise| %>
+<ul>
+  <li><%= exercise.name %></li>
+  <ul>
+    <li>Sets: <%= exercise.sets %></li>
+    <li>Reps: <%= exercise.reps %></li>
+  </ul>
+</ul>
+<% end %>

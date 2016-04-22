@@ -4,6 +4,7 @@
 
 <% @workouts.each do |workout| %>
 <ul>
-  <li><%= link_to "#{workout.title}", edit_workout_path(workout) %></li>
+  <li><%= link_to "Edit #{workout.title}", edit_workout_path(workout) %></li>
+  <li><%= link_to "Show #{workout.title}", workout_path(workout) %></li>
 </ul>
 <% end %>

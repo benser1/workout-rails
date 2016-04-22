@@ -5,7 +5,7 @@ class ExercisesController < ApplicationController
   end
 
   def show
-    @exercise = Exercise.find_by(params[:id])
+    @exercise = Exercise.find(params[:id])
   end
 
   def create
@@ -14,16 +14,16 @@ class ExercisesController < ApplicationController
   end
 
   def edit
-    @exercise = Exercise.find_by(params[:id])
+    @exercise = Exercise.find(params[:id])
   end
 
   def update
-    @exercise = Exercise.find_by(params[:id])
+    @exercise = Exercise.find(params[:id])
     @exercise.update(exercise_params)
   end
 
   def delete
-    @exercise = Exercise.find_by(params[:id])
+    @exercise = Exercise.find(params[:id])
     @exercise.destroy
   end
 

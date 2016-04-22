@@ -5,25 +5,33 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find_by(params[:id])
+    @category = Category.find(params[:id])
+  end
+
+  def new
+    @category = Category.new
   end
 
   def create
     @category = Category.new(category_params)
     @category.save
+
+    redirect_to categories_path
   end
 
   def edit
-    @category = Category.find_by(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def update
-    @category = Category.find_by(params[:id])
+    @category = Category.find(params[:id])
     @category.update(category_params)
+
+    redirect_to categories_path
   end
 
   def delete
-    @category = Category.find_by(params[:id])
+    @category = Category.find(params[:id])
     @category.destroy
   end
 

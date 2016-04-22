@@ -5,7 +5,7 @@ class WorkoutsController < ApplicationController
   end
 
   def show
-    @workout = Workout.find_by(params[:id])
+    @workout = Workout.find(params[:id])
   end
 
   def new
@@ -31,14 +31,14 @@ class WorkoutsController < ApplicationController
   end
 
   def delete
-    @workout = Workout.find_by(params[:id])
+    @workout = Workout.find(params[:id])
     @workout.destroy
   end
 
   private
 
   def workout_params
-    params.require(:workout).permit(:title) ## need to nest exercise, reps, sets
+    params.require(:workout).permit(:title, exercises_attributes: [:id, :name, :reps, :sets, :_destroy]) ## need to nest exercise, reps, sets
   end
 
 
