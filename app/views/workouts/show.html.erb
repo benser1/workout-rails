@@ -1,12 +1,19 @@
 <h1>Workout Show Page</h1>
 
+<%= link_to "Home", workouts_path %>
+
+
 <h3><%= @workout.title %></h3>
-<% @workout.exercises.each do |exercise| %>
-<ul>
-  <li><%= exercise.name %></li>
-  <ul>
-    <li>Sets: <%= exercise.sets %></li>
-    <li>Reps: <%= exercise.reps %></li>
-  </ul>
-</ul>
-<% end %>
+<h4>Category: <%= Category.find_by_id(@workout.category_id).title %></h4>
+  <% @workout.exercises.each do |exercise| %>
+    <ul>
+      <li><%= exercise.name %></li>
+      <ul>
+        <li>Sets: <%= exercise.sets %></li>
+        <li>Reps: <%= exercise.reps %></li>
+      </ul>
+    </ul>
+  <% end %> <br>
+
+  <%= link_to "Edit #{@workout.title}", edit_workout_path(@workout) %><br><br>
+  <%= link_to "Delete #{@workout.title}", workout_path(@workout), method: :delete %>

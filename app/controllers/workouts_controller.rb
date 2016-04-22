@@ -14,6 +14,7 @@ class WorkoutsController < ApplicationController
 
   def create  ## this saves the new workout object
     @workout = Workout.new(workout_params)
+    @workout.category_id = params[:category_id]
     @workout.save
 
     redirect_to workouts_path
@@ -30,15 +31,17 @@ class WorkoutsController < ApplicationController
     redirect_to workouts_path
   end
 
-  def delete
+  def destroy
     @workout = Workout.find(params[:id])
     @workout.destroy
+
+    redirect_to workouts_path
   end
 
   private
 
   def workout_params
-    params.require(:workout).permit(:title, exercises_attributes: [:id, :name, :reps, :sets, :_destroy]) ## need to nest exercise, reps, sets
+    params.require(:workout).permit(:title, :category_id, exercises_attributes: [:id, :name, :reps, :sets, :_destroy]) ## need to nest exercise, reps, sets
   end
 
 

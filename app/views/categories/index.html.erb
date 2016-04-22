@@ -1,8 +1,9 @@
-<h1>category index page</h1>
+<h1>Categories</h1>
+
+<%= link_to "New Category", new_category_path %>
 
 <% @categories.each do |category| %>
   <ul>
-    <li><%= link_to "Edit #{category.title}", edit_category_path(category) %></li>
-    <li><%= link_to "View #{category.title}", category_path(category) %></li>
+    <li><%= link_to "#{category.title}", category_path(category) %>   <%= link_to "Edit", edit_category_path(category) %></li>
   </ul>
 <% end %>
