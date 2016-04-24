@@ -41,7 +41,7 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:title, :category_id, exercises_attributes: [:id, :name, :reps, :sets, :_destroy]) ## need to nest exercise, reps, sets
+    params.require(:workout).permit(:title, :category_id, exercises_attributes: [:id, :name, :reps, :sets, :_destroy])
   end
 
 
