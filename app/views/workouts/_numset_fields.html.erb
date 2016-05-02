@@ -1,9 +1,11 @@
-<div id="numset_fields">
-  <%= f.label "Number of sets" %>
-  <%= f.text_field :number %>
-
-  <%= f.hidden_field :_destroy %>
-
-  <%= link_to "remove", "#", class: "remove_numset_fields" %>
+<div id="numset_fields" class="row">
+  <div class="col-lg-1 input-lg">
+    <%= f.label "Sets" %>
+  </div>
+  <div class="col-lg-11 input-lg">
+    <%= f.text_field :number %>
+    <%= f.hidden_field :_destroy %>
+    <%= link_to "remove", "#", class: "remove_numset_fields" %>
+  </div>
 
 </div>

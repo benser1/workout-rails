@@ -72,18 +72,4 @@ ActiveRecord::Schema.define(version: 20160502181248) do
     t.integer "exercise_id"
   end
 
-  create_table "workouts_numsets", force: :cascade do |t|
-    t.integer  "exercise_id"
-    t.integer  "numset_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "workouts_reps", force: :cascade do |t|
-    t.integer  "exercise_id"
-    t.integer  "rep_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
 end

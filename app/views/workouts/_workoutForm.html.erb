@@ -1,16 +1,31 @@
-<%= form_for @workout do |f| %>
+<div class="workout-form">
+  <%= form_for @workout do |f| %>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-lg-1 input-lg">
+          <%= f.label :title %>
+        </div>
+        <div class="col-lg-6 input-lg">
+          <%= f.text_field :title %>
+        </div>
+      </div>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+      <div class="row">
+        <div class="col-lg-1 input-lg">
+          <%= f.label "Category" %>
+        </div>
+        <div class="col-lg-6 input-lg">
+          <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :title, @workout.category_id) %>
+        </div>
+      </div>
 
-  <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :title, @workout.category_id) %>
+        <%= f.fields_for :exercises do |exercise| %>
+          <%= render "exercise_fields", f: exercise %>
+        <% end %>
 
-  <%= f.fields_for :exercises do |exercise| %>
-    <%= render "exercise_fields", f: exercise %>
+    <%= link_to_add_fields "Add Exercise", f, :exercises %><br><br>
+
+    <%= f.submit %>
+    </div>
   <% end %>
-
-  <br><br>
-
-  <%= link_to_add_fields "Add Exercise", f, :exercises %><br><br>
-
-  <%= f.submit %>
+</div>

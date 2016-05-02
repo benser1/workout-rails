@@ -1,23 +1,25 @@
 <div id="exercise_fields">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="row">
+    <div class="col-lg-1 input-lg">
+      <%= f.label :name %>
+    </div>
+    <div class="col-lg-11 input-lg">
+      <%= f.text_field :name %>
+      <%= f.hidden_field :_destroy %>
+      <%= link_to "remove", "#", class: "remove_exercise_fields" %>
+    </div>
+  </div>
 
   <%= f.fields_for :numsets do |set| %>
     <%= render "numset_fields", f: set %>
   <% end %>
-  <br><br>
 
   <%= link_to_add_fields "Add Set", f, :numsets %><br><br>
 
   <%= f.fields_for :reps do |rep| %>
     <%= render "rep_fields", f: rep %>
   <% end %>
-  <br><br>
 
   <%= link_to_add_fields "Add Rep", f, :reps %><br><br>
-
-  <%= f.hidden_field :_destroy %>
-
-  <%= link_to "remove", "#", class: "remove_exercise_fields" %>
 
 </div>
