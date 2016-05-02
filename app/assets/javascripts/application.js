@@ -18,9 +18,23 @@
 
 
 $(document).ready(function(){
-  $(document).on("click", ".remove_fields", function(event){
+  $(document).on("click", ".remove_exercise_fields", function(event){
     $(this).prev("input[type=hidden]").val('1')
     $(this).closest("#exercise_fields").hide()
+  });
+});
+
+$(document).ready(function(){
+  $(document).on("click", ".remove_rep_fields", function(event){
+    $(this).prev("input[type=hidden]").val('1')
+    $(this).closest("#rep_fields").hide()
+  });
+});
+
+$(document).ready(function(){
+  $(document).on("click", ".remove_numset_fields", function(event){
+    $(this).prev("input[type=hidden]").val('1')
+    $(this).closest("#numset_fields").hide()
   });
 });
 
