@@ -16,6 +16,7 @@
  *= require_self
  */
 
+<<<<<<< HEAD
 .workout-form {
   padding: 2% 0 0 3%;
 
@@ -26,3 +27,20 @@ body {
   background: -webkit-linear-gradient(to left, #E0EAFC , #CFDEF3); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #E0EAFC , #CFDEF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+=======
+ .navbar {
+   background-color: #0099FF;
+ }
+
+ .navbar .nav > li > a {
+   color: white;
+ }
+
+ .navbar .navbar-brand {
+   color: white;
+ }
+
+ .navbar .navbar-toggle {
+   background-color: white;
+ }
+>>>>>>> e55a12931ce9b41072b4c84ac7176cc78900605d
