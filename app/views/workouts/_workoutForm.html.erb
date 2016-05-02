@@ -1,7 +1,7 @@
 <%= form_for @workout do |f| %>
-
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
 
   <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :title, @workout.category_id) %>
 
@@ -14,5 +14,6 @@
   <%= link_to_add_fields "Add Exercise", f, :exercises %><br><br>
 
   <%= f.submit %>
+  </div>
 
 <% end %>
