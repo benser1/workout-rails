@@ -1,9 +1,5 @@
 class RepsController < ApplicationController
 
-  # def new
-  #   @rep = Rep.new
-  # end
-
   def create
     @rep = Rep.new(rep_params)
     @rep.save
@@ -27,7 +23,6 @@ class RepsController < ApplicationController
 
   def rep_params
     params.require(:rep).permit(:number)
-    # params.require(:rep).permit(:number, :exercise_id)
   end
 
 end
