@@ -8,13 +8,13 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
   end
 
-  def new
+  def new # GET /workouts/new - just presents the form to the user
     @workout = Workout.new  ## this instantiates a new workout object
   end
 
-  def create  ## this saves the new workout object
+  def create  # POST /workouts - processes the form
     @workout = Workout.new(workout_params)
-    @workout.category_id = params[:category_id]
+    # @workout.category_id = params[:category_id]
     @workout.save
 
     redirect_to workouts_path

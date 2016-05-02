@@ -1,7 +1,13 @@
 module ApplicationHelper
 
   def link_to_add_fields(name, f, association)
+    # binding.pry
     new_object = f.object.send(association).klass.new
+                #  f.object #=> #<Workout>
+                #
+                #  workout.send(:exercises) #=> Exercise::ActiveRecord_Associations_CollectionProxy
+                #  f.object.send(association).klass #=> Exercise
+                #  #<Exercise>
 
     id = new_object.object_id
 

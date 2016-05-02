@@ -18,3 +18,8 @@
   - Category
     - Title
     - Workout_id
+
+- Create a Join Table
+  - workouts-exercise
+    - workout_id
+    - exercise_id

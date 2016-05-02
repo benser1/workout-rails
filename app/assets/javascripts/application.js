@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap/dist/js/bootstrap
 //= require turbolinks
 //= require_tree .
 
@@ -27,7 +28,8 @@ $(document).ready(function(){
   $(document).on("click", ".add_fields", function(event){
     time = new Date().getTime()
     regexp = new RegExp($(this).data('id'), 'g')
-    $(this).before($(this).data('fields').replace(regexp, time))
+    var html = $(this).data("fields").replace(regexp, time)
+    $(this).before(html)
     event.preventDefault()
   });
 });
