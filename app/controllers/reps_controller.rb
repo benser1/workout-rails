@@ -1,8 +1,8 @@
 class RepsController < ApplicationController
 
-  def new
-    @rep = Rep.new
-  end
+  # def new
+  #   @rep = Rep.new
+  # end
 
   def create
     @rep = Rep.new(rep_params)

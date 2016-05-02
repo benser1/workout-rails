@@ -1,8 +1,8 @@
 class NumsetsController < ApplicationController
-
-  def new
-    @numset = Numset.new
-  end
+  #
+  # def new
+  #   @numset = Numset.new
+  # end
 
   def create
     @numset = Numset.new(numset_params)
@@ -12,7 +12,7 @@ class NumsetsController < ApplicationController
   private
 
   def numset_params
-    params.require(:numset).permit(:number, :exercise_id)
+    params.require(:numset).permit(:number)
   end
 
 

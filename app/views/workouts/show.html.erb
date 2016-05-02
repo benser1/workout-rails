@@ -9,18 +9,15 @@
     <ul>
       <li><%= exercise.name %></li>
       <ul>
-        <li>Sets: <%= exercise.numsets %></li>
-        <li>Reps: <%= exercise.reps %></li>
-        <!-- <% exercise.numsets.each do |set| %>
-        <ul>
-          <li>Should be sets<%= set %></li>
-        </ul>
-          <% end %> -->
+        <% exercise.numsets.each do |set| %>
+        <li>Sets: <%= set.number %></li>
+        <% end %>
+        <% exercise.reps.each do |rep| %>
+          <li>Reps: <%= rep.number %></li>
+        <% end %>
       </ul>
     </ul>
-    <% exercise.reps.each do |rep| %>
-      <%= rep %>
-    <% end %>
+
   <% end %> <br>
 
 
