@@ -9,11 +9,20 @@
     <ul>
       <li><%= exercise.name %></li>
       <ul>
-        <li>Sets: <%= exercise.sets %></li>
+        <li>Sets: <%= exercise.numsets %></li>
         <li>Reps: <%= exercise.reps %></li>
+        <!-- <% exercise.numsets.each do |set| %>
+        <ul>
+          <li>Should be sets<%= set %></li>
+        </ul>
+          <% end %> -->
       </ul>
     </ul>
+    <% exercise.reps.each do |rep| %>
+      <%= rep %>
+    <% end %>
   <% end %> <br>
+
 
   <%= link_to "Edit #{@workout.title}", edit_workout_path(@workout) %><br><br>
   <%= link_to "Delete #{@workout.title}", workout_path(@workout), method: :delete %>

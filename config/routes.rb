@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :numsets
+  resources :reps
   devise_for :users
   resources :categories
   resources :exercises

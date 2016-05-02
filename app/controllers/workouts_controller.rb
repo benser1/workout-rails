@@ -14,7 +14,7 @@ class WorkoutsController < ApplicationController
 
   def create  # POST /workouts - processes the form
     @workout = Workout.new(workout_params)
-    # @workout.category_id = params[:category_id]
+    # binding.pry
     @workout.save
 
     redirect_to workouts_path
@@ -41,7 +41,7 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:title, :category_id, exercises_attributes: [:id, :name, :reps, :sets, :_destroy])
+    params.require(:workout).permit(:title, :category_id, exercises_attributes: [:id, :name, :_destroy])
   end
 
 
