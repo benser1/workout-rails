@@ -8,6 +8,7 @@
   <%= f.fields_for :exercises do |exercise| %>
     <%= render "exercise_fields", f: exercise %>
   <% end %>
+  
   <br><br>
 
   <%= link_to_add_fields "Add Exercise", f, :exercises %><br><br>
