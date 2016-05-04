@@ -16,11 +16,26 @@
  *= require_self
  */
 
+h1 {
+  text-align: center;
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  font-size: 3.3em;
+  color: #41454E;
+}
+.devise-form {
+  padding: 2% 0 0 3%;
+  margin-left: 38%;
+  box-shadow: 10px 10px 25px #888;
+  border-style: groove;
+  width: 25%;
+}
+
 .workout-form {
   padding: 2% 0 0 3%;
   margin-left: 25%;
   box-shadow: 10px 10px 25px #888;
   border-style: groove;
+  width: 50%;
 }
 
 .newcat a {
@@ -68,6 +83,14 @@ body {
  @media(max-width:767px) {
    .workout-form {
      margin-left: 0;
+   }
+
+   h1 {
+     text-align: left;
+   }
+   .devise-form {
+     margin-left: 0;
+     width: 50%;
    }
 }
 

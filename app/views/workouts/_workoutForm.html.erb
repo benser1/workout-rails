@@ -3,11 +3,11 @@
     <div class="form-group">
       <div class="row">
 
-          <%= f.label :title, class: "col-lg-1 col-md-2 col-sm-1 col-xs-3" %>
+          <%= f.label :title, class: "col-lg-1 col-md-2 col-sm-2 col-xs-3" %>
 
           <%= f.text_field :title, class: "col-lg-4 col-md-4 col-sm-4 col-xs-6" %>
 
-          <%= f.label "Category", class: "col-lg-2 col-md-2 col-sm-3 col-xs-4"  %>
+          <%= f.label "Category", class: "col-lg-2 col-md-2 col-sm-2 col-xs-4"  %>
 
         <div class="col-lg-4 col-md-3 col-sm-3 col-xs-3">
           <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :title, @workout.category_id) %>
@@ -19,7 +19,7 @@
         <% end %>
 
           <%= link_to_add_fields "Add Exercise", f, :exercises %>
-        <br>
+        <br><br>
 
     <%= f.submit %>
     </div>
