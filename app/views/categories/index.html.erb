@@ -1,9 +1,25 @@
-<h1>Categories</h1>
-
-<%= link_to "New Category", new_category_path %>
-
-<% @categories.each do |category| %>
-  <ul>
-    <li><%= link_to "#{category.title}", category_path(category) %>   <%= link_to "Edit", edit_category_path(category) %></li>
-  </ul>
-<% end %>
+<div class="bs-example col-md-7 col-md-offset-2 col-lg-7 col-lg-offset-2 col-sm-12 col-xs-12" data-example-id="hoverable-table">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <!-- <th>#</th> -->
+        <th class="text-center"><h3>Category</h3></th>
+        <th class="text-center"><h3>Edit</h3></th>
+        <th class="text-center"><h3>Delete</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+      <tr>
+        <!-- <th scope="row">1</th> -->
+        <td class="text-center"><%= link_to "#{category.title}", category_path(category) %></td>
+        <td class="text-center"><%= link_to "Edit", edit_category_path(category) %></td>
+        <td class="text-center"><%= link_to '<i class="glyphicon glyphicon-remove"></i>'.html_safe, category_path(category), method: :delete %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="newcat">
+    <button class="btn btn-primary"><%= link_to "New Category", new_category_path %></button>
+  </div>
+</div>

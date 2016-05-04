@@ -23,6 +23,14 @@
   border-style: groove;
 }
 
+.newcat a {
+  color: white;
+}
+
+a {
+  font-size: 1.2em;
+}
+
 body {
   background: #ECE9E6; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF); /* Chrome 10-25, Safari 5.1-6 */
