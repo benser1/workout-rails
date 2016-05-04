@@ -18,7 +18,14 @@
 
 .workout-form {
   padding: 2% 0 0 3%;
+}
 
+.newcat a {
+  color: white;
+}
+
+a {
+  font-size: 1.2em;
 }
 
 body {
