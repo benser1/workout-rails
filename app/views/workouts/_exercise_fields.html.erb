@@ -1,14 +1,10 @@
 <div id="exercise_fields">
   <h3>Exercise:</h3><br>
   <div class="row">
-    <!-- <div class="col-lg-1 input-lg"> -->
       <%= f.label :name, class: "col-lg-2 col-md-2 col-sm-2 col-xs-4" %>
-    <!-- </div> -->
-    <!-- <div class="col-lg-11 input-lg"> -->
       <%= f.text_field :name, class: "col-lg-4 col-md-5 col-sm-5 col-xs-5" %>
       <%= f.hidden_field :_destroy %>
       <%= link_to "", "#", class: "remove_exercise_fields col-lg-2 col-md-3 col-sm-5 col-xs-2 glyphicon glyphicon-remove" %>
-    <!-- </div> -->
   </div>
   <br>
   <%= f.fields_for :numsets do |set| %>
