@@ -1,7 +1,21 @@
-<h1><%= @user.username %>'s Workouts</h1>
-
-<% @user.workouts.each do |workout| %>
-  <ul>
-    <li><%= link_to workout.title, workout_path(workout) %></li>
-  </ul>
-<% end %>
+<div class="bs-example col-md-7 col-md-offset-2 col-lg-7 col-lg-offset-2 col-sm-12 col-xs-12" data-example-id="hoverable-table">
+  <h1><%= @user.username %>'s Workouts</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <!-- <th>#</th> -->
+        <th class="text-center"><h3>Workout</h3></th>
+        <th class="text-center"><h3>Category</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @user.workouts.each do |workout| %>
+      <tr>
+        <!-- <th scope="row">1</th> -->
+        <td class="text-center"><%= link_to "#{workout.title}", workout_path(workout) %></td>
+        <td class="text-center"><%= link_to "#{workout.category.title}", category_path(workout.category) %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
