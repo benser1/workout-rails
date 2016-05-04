@@ -1,2 +1,7 @@
-<h1>Users show page</h1>
- <%= @user.email %>
+<h1><%= @user.username %>'s Workouts</h1>
+
+<% @user.workouts.each do |workout| %>
+  <ul>
+    <li><%= link_to workout.title, workout_path(workout) %></li>
+  </ul>
+<% end %>

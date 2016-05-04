@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :exercises
   resources :workouts
 
-  resources :users, only: [:index, :show]
+  resources :users, only: [:show]
 
   root "workouts#index"
   # The priority is based upon order of creation: first created -> highest priority.

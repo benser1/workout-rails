@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav navbar-right">
         <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
         <% if user_signed_in? %>
-        <li><a href="/">Home</a></li>
+        <li><%= link_to "Home", user_path(current_user) %></li>
         <li><%= link_to "Workouts", workouts_path %></li>
         <li><%= link_to "Categories", categories_path %></li>
         <li><%= link_to "New Workout", new_workout_path %></li>

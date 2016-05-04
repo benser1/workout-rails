@@ -4,6 +4,7 @@
 
 
 <h3>Title: <%= @workout.title %></h3>
+<h3>Created by: <%= link_to "#{@workout.user.username}", user_path(@workout.user) %></h3><br />
 <h4>Category: <%= Category.find_by_id(@workout.category_id).title %></h4>
   <% @workout.exercises.each do |exercise| %>
     <ul>
