@@ -22,21 +22,33 @@
 }
 
 body {
-  background: #E0EAFC; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #E0EAFC , #CFDEF3); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #E0EAFC , #CFDEF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ECE9E6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
  .navbar {
-   background-color: #0099FF;
+   background: #4B79A1; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to left, #4B79A1 , #283E51); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to left, #4B79A1 , #283E51); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   height: 60px;
+ }
+
+ .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+   background: #4B79A1; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to left, #4B79A1 , #283E51); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to left, #4B79A1 , #283E51); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  }
 
  .navbar .nav > li > a {
    color: white;
+   font-size: 1.2em;
  }
 
  .navbar .navbar-brand {
    color: white;
+   font-size: 1.2em;
  }
 
  .navbar .navbar-toggle {
