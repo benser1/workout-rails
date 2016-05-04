@@ -79,6 +79,10 @@ body {
    font-size: 1.2em;
  }
 
+ .navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
  .navbar .navbar-brand {
    color: white;
    font-size: 1.2em;
