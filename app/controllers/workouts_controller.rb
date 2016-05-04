@@ -14,7 +14,7 @@ class WorkoutsController < ApplicationController
 
   def create  # POST /workouts - processes the form
     @workout = Workout.new(workout_params)
-    # binding.pry
+    @workout.user_id = current_user.id
     @workout.save
 
     redirect_to workouts_path
@@ -34,6 +34,8 @@ class WorkoutsController < ApplicationController
   def destroy
     @workout = Workout.find(params[:id])
     @workout.destroy
+
+    redirect_to workouts_path
   end
 
   private
