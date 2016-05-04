@@ -1,11 +1,8 @@
 <div id="rep_fields" class="row">
-  <div class="col-lg-1 input-lg">
-    <%= f.label "Reps" %>
-  </div>
-  <div class="col-lg-11 input-lg">
-    <%= f.text_field :number %>
-    <%= f.hidden_field :_destroy %>
-    <%= link_to "remove", "#", class: "remove_rep_fields" %>
-  </div>
+    <%= f.label "Reps", class: "col-lg-1 col-md-2 col-sm-2 col-xs-3" %>
 
+    <%= f.text_field :number, class: "col-lg-4 col-md-5 col-sm-5 col-xs-6" %>
+    <%= f.hidden_field :_destroy %>
+    <%= link_to "", "#", class: "remove_rep_fields col-lg-2 col-md-3 col-sm-5 col-xs-3 glyphicon glyphicon-remove" %>
 </div>
+<br>
