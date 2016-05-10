@@ -1,3 +1,4 @@
+# This controller isn't being used, I'd delete it.
 class RepsController < ApplicationController
 
   def create

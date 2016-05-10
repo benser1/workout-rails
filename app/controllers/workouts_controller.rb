@@ -13,8 +13,7 @@ class WorkoutsController < ApplicationController
   end
 
   def create  # POST /workouts - processes the form
-    @workout = Workout.new(workout_params)
-    @workout.user_id = current_user.id
+    @workout = current_user.workouts.build(workout_params)
     @workout.save
 
     redirect_to workouts_path
