@@ -1,3 +1,4 @@
+# I'd delete this controller too.
 class WorkoutsExercisesController < ApplicationController
 
   # def new

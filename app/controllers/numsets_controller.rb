@@ -1,3 +1,4 @@
+# I don't think we're using this controller, delete it
 class NumsetsController < ApplicationController
   #
   # def new
